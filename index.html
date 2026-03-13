@@ -6,33 +6,32 @@
     <title>Inside Sales Agent &middot; better.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --accent:         #1C4499;
-            --accent-soft:    #3A62B7;
-            --accent-deep:    #062f7b;
-            --accent-glow:    rgba(28, 68, 153, 0.10);
-            --accent-border:  rgba(28, 68, 153, 0.30);
-            --highlight:      #FFFFFF;
-            --highlight-soft: rgba(255,255,255,0.7);
-            --dark:           #0A0F1A;
-            --darker:         #04091A;
-            --darkest:        #020610;
+            --navy:           #002C8B;
+            --navy-deep:      #062f7b;
+            --navy-light:     #1C4499;
+            --navy-glow:      rgba(0, 44, 139, 0.08);
+            --navy-border:    rgba(0, 44, 139, 0.18);
+            --cream:          #FFFAF6;
+            --cream-dark:     #F4F0EA;
             --white:          #FFFFFF;
-            --light:          #FFFAF6;
+            --text:           #063651;
+            --text-light:     #4A6274;
             --gray:           #6B7A8A;
-            --gray-light:     #E3E7EE;
-            --gray-dark:      #374151;
+            --gray-light:     #E8E4DE;
+            --mint:           #81E3AE;
+            --lavender:       #E8D2FF;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark);
-            background: var(--white);
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            color: var(--text);
+            background: var(--cream);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
@@ -41,8 +40,8 @@
            HERO
         ═══════════════════════════════════ */
         .hero {
-            background: var(--darker);
-            color: var(--white);
+            background: var(--cream);
+            color: var(--navy);
             padding: 0;
             position: relative;
             overflow: hidden;
@@ -55,12 +54,12 @@
             right: -200px;
             width: 640px;
             height: 640px;
-            background: radial-gradient(circle, rgba(28,68,153,0.12) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(0,44,139,0.05) 0%, transparent 70%);
             pointer-events: none;
         }
 
         .hero-top-bar {
-            background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+            background: var(--navy);
             height: 4px;
             width: 100%;
         }
@@ -86,40 +85,42 @@
             font-size: 28px;
             font-weight: 800;
             letter-spacing: -0.5px;
-            color: var(--white);
+            color: var(--navy);
         }
 
         .hero-brand .logo-text .logo-dot {
-            color: var(--highlight);
+            color: var(--navy);
         }
 
         .hero-brand .logo-accent {
             width: 36px;
             height: 3px;
-            background: var(--accent);
+            background: var(--navy);
             border-radius: 2px;
         }
 
         .hero-brand .logo-by {
             font-size: 12px;
-            color: var(--gray);
+            color: var(--text-light);
             letter-spacing: 0.5px;
         }
 
         .hero-title {
-            font-size: clamp(28px, 4vw, 44px);
-            font-weight: 800;
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 400;
             line-height: 1.15;
             margin-bottom: 20px;
+            color: var(--navy);
             opacity: 0;
             animation: fadeUp 0.8s ease 0.15s forwards;
         }
 
-        .hero-title .accent { color: var(--highlight); }
+        .hero-title .accent { color: var(--navy); }
 
         .hero-sub {
             font-size: 17px;
-            color: rgba(255,255,255,0.6);
+            color: var(--text-light);
             max-width: 620px;
             line-height: 1.7;
             opacity: 0;
@@ -145,13 +146,13 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: var(--highlight);
+            color: var(--navy);
             font-weight: 600;
         }
 
         .hero-meta .meta-value {
             font-size: 15px;
-            color: rgba(255,255,255,0.85);
+            color: var(--text);
             font-weight: 500;
         }
 
@@ -161,6 +162,7 @@
         .editorial {
             background: var(--white);
             padding: 70px 40px;
+            border-top: 1px solid var(--gray-light);
         }
 
         .editorial-inner {
@@ -172,22 +174,23 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--accent-deep);
+            color: var(--navy);
             font-weight: 700;
             margin-bottom: 16px;
         }
 
         .editorial-heading {
-            font-size: clamp(22px, 3vw, 30px);
-            font-weight: 700;
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: clamp(22px, 3vw, 32px);
+            font-weight: 400;
             line-height: 1.3;
             margin-bottom: 20px;
-            color: var(--dark);
+            color: var(--navy);
         }
 
         .editorial-body {
             font-size: 15px;
-            color: var(--gray-dark);
+            color: var(--text-light);
             line-height: 1.85;
         }
 
@@ -197,7 +200,7 @@
            CANDIDATES SECTION
         ═══════════════════════════════════ */
         .candidates-section {
-            background: var(--light);
+            background: var(--cream);
             padding: 70px 40px 90px;
         }
 
@@ -215,15 +218,16 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--accent-deep);
+            color: var(--navy);
             font-weight: 700;
             margin-bottom: 10px;
         }
 
         .section-title {
-            font-size: clamp(22px, 3vw, 30px);
-            font-weight: 700;
-            color: var(--dark);
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: clamp(22px, 3vw, 32px);
+            font-weight: 400;
+            color: var(--navy);
         }
 
         /* ═══════════════════════════════════
@@ -241,8 +245,8 @@
         }
 
         .card:hover {
-            box-shadow: 0 8px 30px rgba(28,68,153,0.08);
-            border-color: var(--accent-border);
+            box-shadow: 0 8px 30px rgba(0,44,139,0.06);
+            border-color: var(--navy-border);
         }
 
         .card:nth-child(1) { animation-delay: 0.1s; }
@@ -259,14 +263,15 @@
         }
 
         .card-name {
+            font-family: 'DM Serif Display', Georgia, serif;
             font-size: 22px;
-            font-weight: 700;
-            color: var(--dark);
+            font-weight: 400;
+            color: var(--navy);
         }
 
         .card-headline {
             font-size: 14px;
-            color: var(--accent-deep);
+            color: var(--navy);
             font-weight: 500;
             margin-top: 2px;
         }
@@ -281,11 +286,11 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: var(--light);
+            background: var(--cream);
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 13px;
-            color: var(--gray-dark);
+            color: var(--text);
             font-weight: 500;
         }
 
@@ -297,7 +302,7 @@
 
         .card-summary {
             font-size: 14.5px;
-            color: var(--gray-dark);
+            color: var(--text-light);
             line-height: 1.8;
         }
 
@@ -309,8 +314,8 @@
         }
 
         .highlight-tag {
-            background: var(--accent-glow);
-            color: var(--accent-deep);
+            background: var(--navy-glow);
+            color: var(--navy);
             font-size: 12px;
             font-weight: 600;
             padding: 5px 12px;
@@ -358,37 +363,37 @@
             text-decoration: none;
             transition: all 0.2s ease;
             border: 1px solid var(--gray-light);
-            color: var(--gray-dark);
+            color: var(--text);
             background: var(--white);
         }
 
         .doc-link:hover {
-            border-color: var(--accent-border);
-            background: var(--accent-glow);
-            color: var(--accent-deep);
+            border-color: var(--navy-border);
+            background: var(--navy-glow);
+            color: var(--navy);
         }
 
         .doc-link svg { width: 14px; height: 14px; flex-shrink: 0; }
 
         .doc-link.primary {
-            background: var(--accent);
+            background: var(--navy);
             color: var(--white);
-            border-color: var(--accent);
+            border-color: var(--navy);
         }
 
         .doc-link.primary:hover {
-            background: var(--accent-deep);
-            border-color: var(--accent-deep);
+            background: var(--navy-deep);
+            border-color: var(--navy-deep);
         }
 
         .doc-link.video {
-            background: rgba(28,68,153,0.06);
-            border-color: rgba(28,68,153,0.20);
-            color: var(--accent-deep);
+            background: var(--navy-glow);
+            border-color: var(--navy-border);
+            color: var(--navy);
         }
 
         .doc-link.video:hover {
-            background: rgba(28,68,153,0.12);
+            background: rgba(0,44,139,0.14);
         }
 
         .doc-link.pending {
@@ -403,8 +408,8 @@
         .recruiter-note {
             margin-top: 20px;
             padding: 16px 20px;
-            background: linear-gradient(135deg, rgba(28,68,153,0.06) 0%, rgba(28,68,153,0.02) 100%);
-            border-left: 3px solid var(--accent);
+            background: var(--cream);
+            border-left: 3px solid var(--navy);
             border-radius: 0 10px 10px 0;
         }
 
@@ -413,13 +418,13 @@
             font-weight: 700;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: var(--accent-deep);
+            color: var(--navy);
             margin-bottom: 6px;
         }
 
         .recruiter-note p {
             font-size: 13.5px;
-            color: var(--gray-dark);
+            color: var(--text-light);
             line-height: 1.65;
             margin: 0;
         }
@@ -448,7 +453,7 @@
         }
 
         .comparison-table thead th {
-            background: var(--darker);
+            background: var(--navy);
             color: var(--white);
             padding: 14px 14px;
             text-align: left;
@@ -464,23 +469,23 @@
         .comparison-table tbody td {
             padding: 12px 14px;
             border-bottom: 1px solid var(--gray-light);
-            color: var(--gray-dark);
+            color: var(--text-light);
             vertical-align: middle;
             line-height: 1.4;
             font-size: 13px;
         }
 
         .comparison-table tbody tr:last-child td { border-bottom: none; }
-        .comparison-table tbody tr:nth-child(even) { background: var(--light); }
-        .comparison-table tbody td:first-child { font-weight: 600; color: var(--dark); white-space: nowrap; }
-        .check { color: var(--accent-deep); font-weight: 700; }
+        .comparison-table tbody tr:nth-child(even) { background: var(--cream); }
+        .comparison-table tbody td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; }
+        .check { color: var(--navy-deep); font-weight: 700; }
         .partial { color: var(--gray); font-weight: 500; }
 
         /* ═══════════════════════════════════
            TEAM / RECRUITER
         ═══════════════════════════════════ */
         .team-section {
-            background: var(--light);
+            background: var(--cream-dark);
             padding: 70px 40px 80px;
         }
 
@@ -490,15 +495,16 @@
         }
 
         .team-heading {
+            font-family: 'DM Serif Display', Georgia, serif;
             font-size: clamp(22px, 3vw, 28px);
-            font-weight: 700;
-            color: var(--dark);
+            font-weight: 400;
+            color: var(--navy);
             margin-bottom: 8px;
         }
 
         .team-subtitle {
             font-size: 15px;
-            color: var(--gray);
+            color: var(--text-light);
             margin-bottom: 36px;
             line-height: 1.7;
         }
@@ -513,7 +519,7 @@
         }
 
         .team-card-top {
-            background: var(--darker);
+            background: var(--navy);
             padding: 32px 24px 0;
             display: flex;
             flex-direction: column;
@@ -525,7 +531,7 @@
             height: 92px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--accent);
+            border: 3px solid var(--navy-light);
             margin-bottom: -46px;
             position: relative;
             z-index: 2;
@@ -535,11 +541,11 @@
             width: 92px;
             height: 92px;
             border-radius: 50%;
-            border: 3px solid var(--accent);
+            border: 3px solid var(--white);
             margin-bottom: -46px;
             position: relative;
             z-index: 2;
-            background: var(--accent);
+            background: var(--navy-light);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -554,16 +560,17 @@
         }
 
         .team-name {
+            font-family: 'DM Serif Display', Georgia, serif;
             font-size: 18px;
-            font-weight: 700;
-            color: var(--dark);
+            font-weight: 400;
+            color: var(--navy);
             margin-bottom: 4px;
         }
 
         .team-role {
             font-size: 11px;
             font-weight: 600;
-            color: var(--accent-deep);
+            color: var(--navy);
             text-transform: uppercase;
             letter-spacing: 0.8px;
             margin-bottom: 8px;
@@ -582,14 +589,14 @@
 
         .team-bio {
             font-size: 13.5px;
-            color: var(--gray-dark);
+            color: var(--text-light);
             line-height: 1.7;
             margin-bottom: 14px;
         }
 
         .team-email {
             font-size: 13px;
-            color: var(--accent-deep);
+            color: var(--navy);
             text-decoration: none;
             font-weight: 500;
         }
@@ -600,15 +607,15 @@
            FOOTER
         ═══════════════════════════════════ */
         .footer {
-            background: var(--darker);
-            color: rgba(255,255,255,0.4);
+            background: var(--navy);
+            color: rgba(255,255,255,0.5);
             text-align: center;
             padding: 40px 20px;
             font-size: 13px;
         }
 
         .footer a {
-            color: var(--highlight);
+            color: var(--white);
             text-decoration: none;
         }
 
@@ -912,7 +919,7 @@
 
 <!-- ════════════ FOOTER ════════════ -->
 <footer class="footer">
-    <div class="footer-line"><strong style="color: var(--highlight);">Sagan Recruitment</strong> &middot; Prepared for better.</div>
+    <div class="footer-line"><strong style="color: var(--white);">Sagan Recruitment</strong> &middot; Prepared for better.</div>
     <div class="footer-line">Confidential candidate shortlist &middot; March 2026</div>
 </footer>
 
