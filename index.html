@@ -14,8 +14,8 @@
             --accent-deep:    #062f7b;
             --accent-glow:    rgba(28, 68, 153, 0.10);
             --accent-border:  rgba(28, 68, 153, 0.30);
-            --blue-light:     #5B8DEF;
-            --blue-bright:    #7BA3F7;
+            --highlight:      #FFFFFF;
+            --highlight-soft: rgba(255,255,255,0.7);
             --dark:           #0A0F1A;
             --darker:         #04091A;
             --darkest:        #020610;
@@ -60,7 +60,7 @@
         }
 
         .hero-top-bar {
-            background: linear-gradient(90deg, var(--accent), var(--blue-light));
+            background: linear-gradient(90deg, var(--accent), var(--accent-soft));
             height: 4px;
             width: 100%;
         }
@@ -90,7 +90,7 @@
         }
 
         .hero-brand .logo-text .logo-dot {
-            color: var(--blue-light);
+            color: var(--highlight);
         }
 
         .hero-brand .logo-accent {
@@ -115,7 +115,7 @@
             animation: fadeUp 0.8s ease 0.15s forwards;
         }
 
-        .hero-title .accent { color: var(--blue-light); }
+        .hero-title .accent { color: var(--highlight); }
 
         .hero-sub {
             font-size: 17px;
@@ -145,7 +145,7 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: var(--blue-light);
+            color: var(--highlight);
             font-weight: 600;
         }
 
@@ -608,7 +608,7 @@
         }
 
         .footer a {
-            color: var(--blue-light);
+            color: var(--highlight);
             text-decoration: none;
         }
 
@@ -912,7 +912,7 @@
 
 <!-- ════════════ FOOTER ════════════ -->
 <footer class="footer">
-    <div class="footer-line"><strong style="color: var(--blue-light);">Sagan Recruitment</strong> &middot; Prepared for better.</div>
+    <div class="footer-line"><strong style="color: var(--highlight);">Sagan Recruitment</strong> &middot; Prepared for better.</div>
     <div class="footer-line">Confidential candidate shortlist &middot; March 2026</div>
 </footer>
 
