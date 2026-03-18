@@ -442,6 +442,43 @@
         }
 
         /* ═══════════════════════════════════
+           BATCH TABS
+        ═══════════════════════════════════ */
+        .batch-tabs {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px 32px;
+        }
+
+        .batch-tab {
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 2px solid var(--navy);
+            transition: all 0.2s;
+        }
+
+        .batch-tab.active {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        .batch-tab:not(.active) {
+            background: transparent;
+            color: var(--navy);
+        }
+
+        .batch-tab:hover:not(.active) {
+            background: var(--navy-glow);
+        }
+
+        /* ═══════════════════════════════════
            COMPARISON TABLE
         ═══════════════════════════════════ */
         .comparison-section {
@@ -712,6 +749,13 @@
     </div>
 </section>
 
+<!-- ════════════ BATCH TABS ════════════ -->
+<div class="batch-tabs">
+    <button class="batch-tab active" data-batch="1">Batch 1 &middot; March 2026</button>
+    <button class="batch-tab" data-batch="2">Batch 2 &middot; 18 March 2026</button>
+</div>
+
+<div class="batch-content" data-batch="1">
 <!-- ════════════ CANDIDATES ════════════ -->
 <section class="candidates-section">
     <div class="candidates-section-inner">
@@ -906,6 +950,300 @@
     </div>
 </section>
 
+</div><!-- /batch-content 1 -->
+
+<div class="batch-content" data-batch="2" style="display:none">
+<!-- ════════════ BATCH 2 CANDIDATES ════════════ -->
+<section class="candidates-section">
+    <div class="candidates-section-inner">
+        <div class="section-header">
+            <div class="section-label">Screened Candidates</div>
+            <h2 class="section-title">Batch 2 — Shortlisted after initial screening</h2>
+        </div>
+
+        <!-- ─── Lionel M. ─── -->
+        <div class="card" style="animation-delay: 0.1s">
+            <div class="card-top">
+                <div>
+                    <h3 class="card-name">Lionel M.</h3>
+                    <div class="card-headline">Business Development &middot; Lead Generation</div>
+                </div>
+                <div class="card-meta">
+                    <span class="pill">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+                        10+ Years Sales
+                    </span>
+                </div>
+            </div>
+            <p class="card-summary">
+                Seasoned sales professional with over a decade of experience in business development within management consulting and recruitment. Expert in lead generation, relationship building, and high-volume outbound calls. Proficient in multiple CRM platforms including Salesforce, HubSpot, and Monday.com.
+            </p>
+            <div class="card-highlights">
+                <span class="highlight-tag">Lead Generation</span>
+                <span class="highlight-tag">CRM Expert</span>
+                <span class="highlight-tag">BANT Methodology</span>
+                <span class="highlight-tag">Remote Sales</span>
+            </div>
+            <div class="doc-links">
+                <span class="doc-links-label">Materials</span>
+                <a href="resume-lionel.html" target="_blank" class="doc-link primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Resume
+                </a>
+                <a href="https://drive.google.com/file/d/1dAS_zREG8-I51QYSehUPEfWwywqUHpWt/view" target="_blank" class="doc-link video">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Intro Video
+                </a>
+            </div>
+            <div class="recruiter-note">
+                <div class="recruiter-note-label">Recruiter's Note</div>
+                <p>Lionel brings deep business development experience with a strong entrepreneurial drive. His decade-plus track record in consultative sales and CRM management makes him a solid fit for roles requiring independent prospecting and client nurturing. His BANT qualification methodology aligns well with structured sales processes.</p>
+            </div>
+        </div>
+
+        <!-- ─── Romica N. ─── -->
+        <div class="card" style="animation-delay: 0.2s">
+            <div class="card-top">
+                <div>
+                    <h3 class="card-name">Romica N.</h3>
+                    <div class="card-headline">Outbound Sales &middot; Appointment Setting</div>
+                </div>
+                <div class="card-meta">
+                    <span class="pill">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        Cold Calling Pro
+                    </span>
+                </div>
+            </div>
+            <p class="card-summary">
+                Driven outbound sales professional with hands-on experience in cold calling, appointment setting, and telesales across telecommunications, healthcare, and banking. Strong rapport builder with clear and confident communication style. Proficient in Zoho and HubSpot CRM. Can start immediately.
+            </p>
+            <div class="card-highlights">
+                <span class="highlight-tag">Cold Calling</span>
+                <span class="highlight-tag">Appointment Setting</span>
+                <span class="highlight-tag">Healthcare Sales</span>
+                <span class="highlight-tag">CRM Proficiency</span>
+            </div>
+            <div class="doc-links">
+                <span class="doc-links-label">Materials</span>
+                <a href="resume-romica.html" target="_blank" class="doc-link primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Resume
+                </a>
+                <a href="https://drive.google.com/file/d/17YLK8VhKhpxITZ0bbQilblLvDH3P5yRT/view" target="_blank" class="doc-link video">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Intro Video
+                </a>
+            </div>
+            <div class="recruiter-note">
+                <div class="recruiter-note-label">Recruiter's Note</div>
+                <p>Romica stands out for her authentic communication style and persistence in overcoming objections. Her experience in healthcare appointment setting directly aligns with the role. She thrives in target-driven environments and can start immediately. Strong coachability and solid potential in high-trust outreach environments.</p>
+            </div>
+        </div>
+
+        <!-- ─── Alejandro C. ─── -->
+        <div class="card" style="animation-delay: 0.3s">
+            <div class="card-top">
+                <div>
+                    <h3 class="card-name">Alejandro C.</h3>
+                    <div class="card-headline">Business Development &middot; High-Volume Calling</div>
+                </div>
+                <div class="card-meta">
+                    <span class="pill">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        625+ Calls/Week
+                    </span>
+                </div>
+            </div>
+            <p class="card-summary">
+                Results-driven bilingual sales professional with proven US market experience. Consistently achieved 110% of quota at AtoB with 625+ weekly outbound calls. Background spanning BDR, cold calling, logistics, and call center team supervision across 8+ years. Top 3 BDR in Q1 2025.
+            </p>
+            <div class="card-highlights">
+                <span class="highlight-tag">US Market Experience</span>
+                <span class="highlight-tag">High-Volume Calling</span>
+                <span class="highlight-tag">Pipeline Management</span>
+                <span class="highlight-tag">Bilingual</span>
+            </div>
+            <div class="doc-links">
+                <span class="doc-links-label">Materials</span>
+                <a href="resume-alejandro.html" target="_blank" class="doc-link primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Resume
+                </a>
+                <a href="https://drive.google.com/file/d/1jm-_Vz5YRXOO0zQ_J7f2gc4rppLxf-li/view" target="_blank" class="doc-link video">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Intro Video
+                </a>
+            </div>
+            <div class="recruiter-note">
+                <div class="recruiter-note-label">Recruiter's Note</div>
+                <p>Alejandro is the strongest high-volume caller in this batch. His 625+ weekly call cadence at AtoB and 150-250 daily calls at Simplex Group match the role's ramp to 135 calls/day. Bilingual, US-facing experience, and top-performer track record make him the standout for raw phone performance.</p>
+            </div>
+        </div>
+
+        <!-- ─── Carlos A. ─── -->
+        <div class="card" style="animation-delay: 0.4s">
+            <div class="card-top">
+                <div>
+                    <h3 class="card-name">Carlos A.</h3>
+                    <div class="card-headline">Outbound Sales &middot; BPO &middot; Lead Generation</div>
+                </div>
+                <div class="card-meta">
+                    <span class="pill">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+                        Assoc. Degree
+                    </span>
+                </div>
+            </div>
+            <p class="card-summary">
+                Dedicated bilingual sales professional with BPO and healthcare sales experience. Managed inbound and outbound calls for 30+ US companies at RCC BPO, earned promotion to Onboarding Supervisor. Experienced in insurance enrollment and patient qualification at Countrywide Medical.
+            </p>
+            <div class="card-highlights">
+                <span class="highlight-tag">BPO Experience</span>
+                <span class="highlight-tag">Healthcare Sales</span>
+                <span class="highlight-tag">Insurance Enrollment</span>
+                <span class="highlight-tag">Bilingual</span>
+            </div>
+            <div class="doc-links">
+                <span class="doc-links-label">Materials</span>
+                <a href="resume-carlos.html" target="_blank" class="doc-link primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Resume
+                </a>
+                <a href="https://drive.google.com/file/d/1sNnCwh_bpD6ZuzH1F5s4di1j2tYuZXA_/view" target="_blank" class="doc-link video">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Intro Video
+                </a>
+            </div>
+            <div class="recruiter-note">
+                <div class="recruiter-note-label">Recruiter's Note</div>
+                <p>Carlos brings direct healthcare and insurance sales experience from Countrywide Medical, which maps closely to Better Health's model. His BPO background handling 30+ US accounts shows adaptability, and his promotion to supervisor signals reliability. Strong fit for the insurance verification side of the role.</p>
+            </div>
+        </div>
+
+        <!-- ─── Carlos B. ─── -->
+        <div class="card" style="animation-delay: 0.5s">
+            <div class="card-top">
+                <div>
+                    <h3 class="card-name">Carlos B.</h3>
+                    <div class="card-headline">Sales &amp; Customer Service &middot; Team Leadership</div>
+                </div>
+                <div class="card-meta">
+                    <span class="pill">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+                        5+ Years Call Center
+                    </span>
+                </div>
+            </div>
+            <p class="card-summary">
+                Results-driven sales and customer service professional with 5+ years in call center and insurance environments. Progressed from Sales Rep to Trainer to Supervisor at Allied Global. Managed 50-60+ calls per day with high customer satisfaction. Bilingual with strong objection handling skills.
+            </p>
+            <div class="card-highlights">
+                <span class="highlight-tag">Team Leadership</span>
+                <span class="highlight-tag">Objection Handling</span>
+                <span class="highlight-tag">Insurance Sales</span>
+                <span class="highlight-tag">Training &amp; Coaching</span>
+            </div>
+            <div class="doc-links">
+                <span class="doc-links-label">Materials</span>
+                <a href="resume-carlosb.html" target="_blank" class="doc-link primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Resume
+                </a>
+                <a href="https://drive.google.com/file/d/1LOARvDiyZ4w0Llf_a1uazzNxZIxOvjzA/view?usp=sharing" target="_blank" class="doc-link video">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Intro Video
+                </a>
+            </div>
+            <div class="recruiter-note">
+                <div class="recruiter-note-label">Recruiter's Note</div>
+                <p>Carlos B's growth from rep to supervisor at Allied Global demonstrates leadership and reliability. His insurance background at Altia and 100+ daily call volume align well with the role. He brings coaching ability that could benefit the broader team long-term.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ════════════ BATCH 2 COMPARISON TABLE ════════════ -->
+<section class="comparison-section">
+    <div class="editorial-label">At a Glance</div>
+    <h2 class="editorial-heading">Side-by-Side Comparison</h2>
+    <p class="editorial-body">All five screened candidates, stacked against what Better Health needs in this role.</p>
+    <div class="table-wrap">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Criteria</th>
+                    <th>Lionel M.</th>
+                    <th>Romica N.</th>
+                    <th>Alejandro C.</th>
+                    <th>Carlos A.</th>
+                    <th>Carlos B.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Experience</td>
+                    <td class="check">10+ years</td>
+                    <td class="partial">3+ years</td>
+                    <td class="check">8+ years</td>
+                    <td class="partial">3+ years</td>
+                    <td class="check">5+ years</td>
+                </tr>
+                <tr>
+                    <td>Phone Sales</td>
+                    <td class="check">High-volume outbound</td>
+                    <td class="check">Cold calling, telesales</td>
+                    <td class="check">625+ calls/week</td>
+                    <td class="check">Inbound/outbound BPO</td>
+                    <td class="check">50-60+ calls/day</td>
+                </tr>
+                <tr>
+                    <td>CRM Tools</td>
+                    <td class="check">Salesforce, HubSpot, Monday</td>
+                    <td class="check">Zoho, HubSpot, Phantom</td>
+                    <td class="partial">Trellus</td>
+                    <td class="check">HubSpot, GoTo, CallShapper</td>
+                    <td class="partial">Not specified</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td class="check">Fluent</td>
+                    <td class="check">Fluent</td>
+                    <td class="check">Fluent (Bilingual)</td>
+                    <td class="check">Fluent (Bilingual)</td>
+                    <td class="check">Fluent (Bilingual)</td>
+                </tr>
+                <tr>
+                    <td>Salary</td>
+                    <td>$1,500–$1,900</td>
+                    <td>$1,300</td>
+                    <td>$1,200–$1,900</td>
+                    <td>$1,500–$2,000</td>
+                    <td>$1,200–$1,800</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>South Africa</td>
+                    <td>South Africa</td>
+                    <td>Honduras</td>
+                    <td>Belize</td>
+                    <td>Honduras</td>
+                </tr>
+                <tr>
+                    <td>Key Strength</td>
+                    <td>CRM &amp; pipeline strategy</td>
+                    <td>Healthcare appointment setting</td>
+                    <td>Volume &amp; quota performance</td>
+                    <td>Healthcare insurance enrollment</td>
+                    <td>Leadership &amp; coaching</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+</div><!-- /batch-content 2 -->
+
 <!-- ════════════ TEAM ════════════ -->
 <section class="team-section">
     <div class="team-inner">
@@ -937,5 +1275,15 @@
     <div class="footer-line">Made with <span style="color:#e25555;">&#9829;</span> by Sagan's White Glove Team</div>
 </footer>
 
+<script>
+document.querySelectorAll('.batch-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+        document.querySelectorAll('.batch-tab').forEach(function(t) { t.classList.remove('active'); });
+        document.querySelectorAll('.batch-content').forEach(function(c) { c.style.display = 'none'; });
+        tab.classList.add('active');
+        document.querySelector('.batch-content[data-batch="' + tab.dataset.batch + '"]').style.display = '';
+    });
+});
+</script>
 </body>
 </html>
